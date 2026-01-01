@@ -166,7 +166,7 @@ def get_from_cache(grid, cached_results, rectangle_counter):
     solutions = set()
     zeros_coords = np.where((grid.cells == 0) & grid.active_mask)
     for cached_result in cached_results:
-        cached_array = np.array([ord(letter) for letter in cached_result]).reshape(
+        cached_array = np.array([int(cached_result[i:i+2]) for i in range(0, len(cached_result), 2)]).reshape(
             grid.size.height, grid.size.width) + next(rectangle_counter)
         grid.cells[zeros_coords] = cached_array[zeros_coords]
         solutions.add(lexicographical_grid(grid))
