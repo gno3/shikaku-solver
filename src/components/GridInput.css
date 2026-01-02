@@ -1,0 +1,65 @@
+.grid-input-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.grid-input {
+  display: grid;
+  gap: 2px;
+  background-color: #333;
+  border: 2px solid #333;
+  width: fit-content;
+  aspect-ratio: auto;
+}
+
+.grid-cell {
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.grid-cell:hover {
+  background-color: #f0f0f0;
+}
+
+.grid-cell.selected {
+  background-color: #e3f2fd;
+  border: 2px solid #2196f3;
+}
+
+.grid-cell.void {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.grid-cell.void:hover {
+  background-color: #ccc;
+}
+
+.cell-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+}
+
+.cell-value {
+  user-select: none;
+}

@@ -1,0 +1,42 @@
+.grid-display-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.grid-display {
+  display: grid;
+  gap: 2px;
+  background-color: #333;
+  border: 2px solid #333;
+  width: fit-content;
+  aspect-ratio: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.display-cell {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.display-cell.void {
+  background-color: #ccc !important;
+}
+
+.area-number {
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  text-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white;
+  user-select: none;
+}
